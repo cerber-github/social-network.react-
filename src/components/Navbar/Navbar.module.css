@@ -1,0 +1,17 @@
+.Navbar {
+    grid-area: n;
+    background-color: darkkhaki;
+    padding: 20px;
+}
+
+.item {
+    color: lightgoldenrodyellow;
+}
+
+.active {
+    color: crimson;
+}
+
+.item a {
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.app-wrapper-content {
+    grid-area: p;
+    background-color: antiquewhite;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+    padding: 20px;
+}
+
+.messages {
+    padding: 20px;
+}
+
+.dialog a {
+    text-decoration: none;
+}
