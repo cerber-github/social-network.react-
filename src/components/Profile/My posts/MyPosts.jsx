@@ -1,19 +1,20 @@
-import React from "react";
-import s from './MyPosts.module.css';
+import React, { useState } from "react";
 import Post from './Post/Post'
+import s from './MyPosts.module.css';
 
 const MyPosts = (props) => {
-    let postsElement = props.posts?.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
+    let postsElement = props.posts?.map(p => <Post key={p.id} message={p.message} likeCount={p.likeCount}/>);
 
-    let newPostElement = React.createRef();
+    const [postText, setPostText] = useState('');
 
     let onAddPost = () => {
-        props.addPost();
+        props.addPost(postText);
+        setPostText('');
     }
 
-    let onPostChange = () => {
-        let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+    let onPostChange = (e) => {
+        let newPostText = e.target.value;
+        setPostText(newPostText);
     }
 
     return (
@@ -21,13 +22,16 @@ const MyPosts = (props) => {
             <h3> Post </h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange}
-                              placeholder='Enter your message'
-                              ref={newPostElement}
-                              value={props.newPostText}/>
+                    <textarea
+                        value={postText}
+                        onChange={onPostChange}
+                        placeholder='Enter your message'
+                    />
                 </div>
                 <div>
-                    <button onClick={onAddPost}> Add Post </button>
+                    <button onClick={onAddPost}>
+                        Add Post
+                    </button>
                 </div>
             </div>
             <div className={s.posts}>

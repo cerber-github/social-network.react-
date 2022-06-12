@@ -1,11 +1,6 @@
 import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
-import {sidebarReducer} from "./sidebarReducer";
-
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
-const SEND_MESSAGE = 'SEND_MESSAGE';
+import { sidebarReducer } from "./sidebarReducer";
 
 let store = {
     _state: {
@@ -13,8 +8,7 @@ let store = {
             posts: [
                 {id: 1, message: 'Hi, how are you?', likeCount: 12},
                 {id: 2, message: 'Its my first post', likeCount: 25}
-            ],
-            newPostText: ''
+            ]
         },
         messagesPage: {
             messages: [
@@ -36,40 +30,17 @@ let store = {
     _callSubscriber() {
         console.log('changed')
     },
-
     getState() {
         return this._state;
     },
     subscribe(observer) {
         this._callSubscriber = observer;
     },
-
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action)
         this._state.messagesPage = dialogsReducer(this._state.messagesPage, action)
         this._state.sidebar = sidebarReducer(this._state.sidebar, action)
         this._callSubscriber(this._state);
-    }
-}
-
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-export const updateNewPostTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT, newText: text
-    }
-}
-export const sendMessageCreator = () => {
-    return {
-        type: SEND_MESSAGE
-    }
-}
-export const updateNewMessageBodyCreator = (body) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_BODY, body: body
     }
 }
 
