@@ -23,8 +23,10 @@ const profileReducer = (state = initialState, action) => {
                 message: action.message,
                 likesCount: 0
             };
-            state.posts.push(newPost);
-            return state;
+            return  {
+                ...state,
+                posts: [...state.posts, newPost]
+            };
         default:
             return state;
     }

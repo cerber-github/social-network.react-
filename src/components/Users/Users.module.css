@@ -1,0 +1,27 @@
+.userPhoto {
+    width: 130px;
+    height: 110px;
+    padding: 10px;
+
+}
+
+.selectedPage {
+    font-weight: bold;
+}
+
+.userInfo {
+    display: grid;
+    grid-template-areas:
+    'h p'
+    'n p';
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 10px;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.userButton {
+    grid-area: n;
+    padding: 7px;
+}
