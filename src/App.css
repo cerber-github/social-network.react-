@@ -1,4 +1,5 @@
 .app-wrapper {
+    padding-top: 3px;
     margin: 0 auto;
     width: 1000px;
     grid-template-areas:
@@ -13,5 +14,12 @@
 
 .app-wrapper-content {
     grid-area: p;
-    background-color: antiquewhite;
+    background-color: wheat;
+    border-radius: 9px;
+
+}
+
+.preloader {
+    padding: 10px;
+    background-color: wheat;
 }
