@@ -1,17 +1,20 @@
 .Header {
     grid-area: h;
-    background-color: lightgoldenrodyellow;
+    background-color: cornflowerblue;
+    border-style: double;
     border-radius: 5px;
+    border-color: darkblue;
 }
 .Header img {
-    width: 55px;
-    border-style: outset ;
-    border-color: darkkhaki;
-    border-radius: 9px;
+    width: 60px;
+    border-color: white;
+    border-radius: 5px;
+    padding: 4px;
 }
 .loginBlock {
     float: right;
+    position: relative;
 }
 .loginBlock a {
-    color: darkred;
+    color: white;
 }

@@ -10,16 +10,19 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
+    background-color: white;
 }
 
 .app-wrapper-content {
     grid-area: p;
-    background-color: wheat;
+    background-color: lavender;
     border-radius: 9px;
+    border-color: darkblue;
+    border-style: double;
 
 }
 
 .preloader {
     padding: 10px;
-    background-color: wheat;
+    background-color: lavender;
 }

@@ -1,13 +1,16 @@
 .Navbar {
     grid-area: n;
-    background-color: darkkhaki;
+    background-color: lightblue;
     padding: 20px;
     border-radius: 9px;
-
+    border-style: double;
+    border-color: darkblue;
 }
 
 .item {
-    color: lightgoldenrodyellow;
+    color: mediumblue;
+    font-family: "JetBrains Mono";
+    font-size: 23px;
 }
 
 .active {
