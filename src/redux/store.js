@@ -17,11 +17,12 @@ let store = {
                 {id: 1, message: 'Yep'}
             ],
             dialogs: [
-                {id: 1, name: 'Tania'},
+                {id: 1, name: 'Senya'},
                 {id: 2, name: 'Rost'},
                 {id: 3, name: 'Vlad'},
                 {id: 4, name: 'Dima'},
                 {id: 5, name: 'Anton'}
+
             ],
             newMessageBody: ""
         },
