@@ -6,7 +6,8 @@ import { sendMessageCreator } from "../../redux/dialogs-reducer";
 let mapStateToProps = (state) => {
     return {
         dialogs: state?.messagesPage?.dialogs || [],
-        messages: state?.messagesPage?.messages || []
+        messages: state?.messagesPage?.messages || [],
+        isAuth: state.auth.isAuth
     }
 };
 

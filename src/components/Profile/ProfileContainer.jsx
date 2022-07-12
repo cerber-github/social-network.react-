@@ -1,11 +1,13 @@
 import React, {useEffect} from "react";
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {useParams} from "react-router";
+import {Navigate, useParams} from "react-router";
 import {getUserProfile} from "../../redux/profile-reducer";
 
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    isAuth: state.auth.isAuth
+
 });
 
 const ProfileContainer = (props) => {
@@ -15,7 +17,9 @@ const ProfileContainer = (props) => {
         let userId = routerParams?.userId || 2;
         props.getUserProfile(userId);
 
-    }, [])
+    }, []);
+
+    if (!props.isAuth) return <Navigate to="/login"/>;
 
     return (
         <Profile {...props} profile={props.profile}/>
