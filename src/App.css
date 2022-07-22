@@ -1,7 +1,7 @@
 .app-wrapper {
-    padding-top: 3px;
+    padding-top: 5px;
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
     grid-template-areas:
     'h h'
     'n p';
@@ -15,11 +15,15 @@
 
 .app-wrapper-content {
     grid-area: p;
-    background-color: lavender;
+    background-color: white;
+    border-style: dashed;
+    border-color: red;
     border-radius: 9px;
+    text-decoration-color: white;
+    /*background-image: url("https://i.pinimg.com/originals/31/d4/41/31d441a7641b66cff28d5ee3925eebb2.jpg");*/
 }
 
 .preloader {
     padding: 10px;
-    background-color: lavender;
+    background-color: #ff000051;
 }

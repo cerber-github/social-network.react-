@@ -14,8 +14,13 @@
 
 .messages {
     padding: 20px;
+    font-size: larger;
+    touch-action: double-tap-zoom;
 }
 
 .dialog a {
+    text-decoration: none;
+    color:  black;
+    font-size: larger;
     text-decoration: none;
 }

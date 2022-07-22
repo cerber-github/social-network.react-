@@ -1,16 +1,19 @@
 .Header {
     grid-area: h;
-    background-color: cornflowerblue;
+    background-color: red;
     border-radius: 5px;
+    /*background-image: url("https://i.pinimg.com/originals/31/d4/41/31d441a7641b66cff28d5ee3925eebb2.jpg");*/
 }
 .Header img {
-    width: 60px;
+    width: 59px;
     border-color: white;
     border-radius: 5px;
+    padding: 1px 0px 0px 18px;
 }
 .loginBlock {
+    padding: 17px 25px 0px 0px;
+    font-size: 17px ;
     float: right;
-    position: relative;
 }
 .loginBlock a {
     color: white;

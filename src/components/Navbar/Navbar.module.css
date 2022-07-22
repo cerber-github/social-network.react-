@@ -1,18 +1,20 @@
 .Navbar {
     grid-area: n;
-    background-color: lightblue;
+    background-color: red;
     padding: 20px;
     border-radius: 9px;
+    /*background-image: url("https://i.pinimg.com/originals/31/d4/41/31d441a7641b66cff28d5ee3925eebb2.jpg");*/
 }
 
 .item {
-    color: mediumblue;
+    color: white;
     font-family: "JetBrains Mono";
     font-size: 23px;
+    font-weight: bold;
 }
 
 .active {
-    color: crimson;
+    color: black;
 }
 
 .item a {
